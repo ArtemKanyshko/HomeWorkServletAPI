@@ -16,8 +16,8 @@ public class LoginService {
     }
 
     public boolean checkCredentials (String login, String password) {
-        if (userService.userArtem.getLogin().equals(login)
-        && userService.userArtem.getPassword().equals(password)) {
+        if (userService.getUser().getLogin().equals(login)
+        && userService.getUser().getPassword().equals(password)) {
             return true;
         }
 

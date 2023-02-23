@@ -6,7 +6,6 @@ public class UserService {
 
     private static UserService instance;
 
-    User userArtem = new User("Artem", "qwerty", "Artem", 28, "male");
 
     private UserService() {
 
@@ -19,17 +18,17 @@ public class UserService {
     }
 
     public User getUser() {
-        return userArtem;
+        return new User("Artem", "qwerty", "Artem", 28, "male");
     }
 
     public String userGetName() {
-        return userArtem.getName();
+        return getUser().getName();
     }
 
     public String userInfo() {
-        return userArtem.getName() + " ,"
-                + userArtem.getAge() + " ,"
-                + userArtem.getSex();
+        return getUser().getName() + " ,"
+                + getUser().getAge() + " ,"
+                + getUser().getSex();
     }
 
 
